@@ -18,7 +18,7 @@ export async function POST(req: Request) {
     const text = Buffer.from(arrayBuffer).toString("utf-8");
 
     const response = await openai.chat.completions.create({
-      model: 'gpt-3.5-turbo',
+      model: 'gpt-4o-mini',
       messages: [
         { role: 'system', content: 'You are a file analysis expert for Stark Industries.' },
         { role: 'user', content: `Analyze and summarize this file content:\n\n${text}` },
